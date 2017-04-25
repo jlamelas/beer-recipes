@@ -23,12 +23,12 @@
      props: ['beer'],
      data () {
          return {
-             description: ''
+             description: []
          }
      },
      methods: {
          updateBeer (beer) {
-             this.$axios.get('https://api.punkapi.com/v2/beers?beer_name=' + beer)
+             this.$axios.get('https://api.punkapi.com/v2/beers?ids=' + beer)
                  .then(response => {
                      this.description = response.data;
                  });
@@ -38,7 +38,7 @@
          this.updateBeer(this.beer);
      },
      watch: {
-         beer (val) {
+         beer: function (val) {
              this.updateBeer(val);
          }
      }

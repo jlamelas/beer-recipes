@@ -5,7 +5,7 @@
             <h4>Select a beer</h4>
             <select class="form-control" v-on:change="beerChanged">
                 <option value="">Please, select a beer...</option>
-                <option v-for="beer in beers" v-bind:value="beer.name">{{beer.name}}</option>
+                <option v-for="beer in beers" v-bind:value="beer.id">{{beer.name}}</option>
             </select>
         </div>
     </div>
@@ -17,13 +17,13 @@
      data () {
          return {
              beers: [],
-             beer: null
+             beer: ''
          }
      },
      methods: {
          beerChanged (e) {
              for (var i = 0; i < this.beers.length; i++) {
-                 if (this.beers[i].name == e.target.value) {
+                 if (this.beers[i].id == e.target.value) {
                      this.beer = this.beers[i];
                  }
              }
