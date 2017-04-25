@@ -23,7 +23,7 @@
      props: ['beer'],
      data () {
          return {
-             description: null
+             description: ''
          }
      },
      methods: {
