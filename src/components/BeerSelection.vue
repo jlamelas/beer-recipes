@@ -31,7 +31,7 @@
          }
      },
      created () {
-        axios.get('https://api.punkapi.com/v2/beers?per_page=100')
+        this.$axios.get('https://api.punkapi.com/v2/beers?per_page=80')
               .then(reponse => {
                   this.beers = response.data;
               });
