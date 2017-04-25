@@ -1,5 +1,20 @@
 <template>
-    
+    <div class="beerdescription">
+        <div class="container">
+            <div class="media">
+                <div class="media left">
+                    <img class="media-object" alt="" v-bind:src="description.image_url"/>
+                </div>
+                <div class="media-body">
+                    <div class="media-heading">
+                        <h4>{{description.name}} <br/>
+                            <small>{{description.tagline}}</small>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -21,10 +36,15 @@
      },
      created () {
          this.updateBeer(this.beer);
+     },
+     watch: {
+         beer (val) {
+             this.updateBeer(val);
+         }
      }
  }
 </script>
 
 <style>
- 
+
 </style>
