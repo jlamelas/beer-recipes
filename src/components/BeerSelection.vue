@@ -1,7 +1,7 @@
 <template>
     <div class="beerselection">
         <div class="jumbotron">
-            <h2><span class="glyphicon glyphincon-list-alt">Beers List</span></h2>
+            <h2><span class="glyphicon glyphicon-list-alt"> Beers List</span></h2>
             <h4>Select a beer</h4>
             <select class="form-control" v-on:change="beerChanged">
                 <option value="">Please, select a beer...</option>
@@ -32,7 +32,7 @@
      },
      created () {
         this.$axios.get('https://api.punkapi.com/v2/beers?per_page=80')
-              .then(reponse => {
+              .then(response => {
                   this.beers = response.data;
               });
      }
