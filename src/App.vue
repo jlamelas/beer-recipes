@@ -1,6 +1,6 @@
 <template>
     <div  class="container" id="app">
-        <BeerSelection v-on:beerChanged="beerChanged"></BeerSelection>
+        <BeerSelection v-on:change="beerChanged"></BeerSelection>
         <BeerDescription v-bind:beer="beer"></BeerDescription>
     </div>
 </template>
