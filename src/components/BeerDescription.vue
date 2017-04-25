@@ -3,7 +3,7 @@
         <div class="container">
             <div class="media">
                 <div class="media left">
-                    <img class="media-object" alt="" v-bind:src="description.image_url"/>
+                    <img class="media-object img-responsive" alt="" v-bind:src="description.image_url"/>
                 </div>
                 <div class="media-body">
                     <div class="media-heading">
@@ -30,7 +30,7 @@
          updateBeer (beer) {
              this.$axios.get('https://api.punkapi.com/v2/beers?ids=' + beer)
                  .then(response => {
-                     this.description = response.data;
+                     this.description = response.data[0];
                  });
          }
      },
@@ -45,6 +45,9 @@
  }
 </script>
 
-<style>
-
+<style scoped>
+ .media-object {
+     width: 128px;
+     padding: 10px;
+ }
 </style>
