@@ -2,7 +2,7 @@
     <div class="beerdescription">
         <div class="container">
             <div class="media">
-                <div class="media left">
+                <div class="media-left">
                     <img class="media-object img-responsive" alt="" v-bind:src="description.image_url"/>
                 </div>
                 <div class="media-body">
@@ -11,6 +11,13 @@
                             <small>{{description.tagline}}</small>
                         </h4>
                     </div>
+                    <p>
+                        {{description.description}}
+                    </p>
+                    <h4>Food pairing</h4>
+                    <p v-for="food in description.food_pairing">
+                        {{food}}.
+                    </p>
                 </div>
             </div>
         </div>
