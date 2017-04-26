@@ -1,6 +1,6 @@
 <template>
-    <div class="beerselection">
-        <div class="jumbotron">
+    <div class="beerselection row">
+        <div class="jumbotron col-xs-12">
             <h2><span class="glyphicon glyphicon-list-alt"> Beers List</span></h2>
             <h4>Select a beer</h4>
             <select class="form-control" v-on:change="beerChanged">

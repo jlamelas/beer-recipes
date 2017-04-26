@@ -1,24 +1,22 @@
 <template>
     <div class="beerdescription">
-        <div class="container">
-            <div class="media">
-                <div class="media-left">
-                    <img class="media-object img-responsive" alt="" v-bind:src="description.image_url"/>
+        <div class="media">
+            <div class="media-left">
+                <img class="media-object" alt="" v-bind:src="description.image_url"/>
+            </div>
+            <div class="media-body">
+                <div class="media-heading">
+                    <h4>{{description.name}} <br/>
+                        <small>{{description.tagline}}</small>
+                    </h4>
                 </div>
-                <div class="media-body">
-                    <div class="media-heading">
-                        <h4>{{description.name}} <br/>
-                            <small>{{description.tagline}}</small>
-                        </h4>
-                    </div>
-                    <p>
-                        {{description.description}}
-                    </p>
-                    <h4>Food pairing</h4>
-                    <p v-for="food in description.food_pairing">
-                        {{food}}.
-                    </p>
-                </div>
+                <p>
+                    {{description.description}}
+                </p>
+                <h4 v-if="description.food_pairing">Food pairing</h4>
+                <p v-for="food in description.food_pairing">
+                    {{food}}.
+                </p>
             </div>
         </div>
     </div>
