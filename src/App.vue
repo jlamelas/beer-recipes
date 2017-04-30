@@ -1,5 +1,5 @@
 <template>
-    <div  class="container" id="app">
+    <div class="container" id="app">
         <BeerSelection v-on:beerChanged="beerChanged"></BeerSelection>
         <BeerDescription v-bind:beer="beer"></BeerDescription>
     </div>
